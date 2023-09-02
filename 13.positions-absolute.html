@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Position</title>
+    <style>
+        .outer-box{
+            width: 200px;
+            height: 200px;
+            background-color: #a7a7a7;
+            position: relative;
+        }
+        .inner-box{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        /* bizim kapsayıcı div olan outer-box ta position kısmına relative yazmamız gerekiyor 
+        çünkü eğer biz buraya static yazarsak altta inner-box kendini browserin özelliklerine göre ayarlamaya calışır
+         burada da kapsayıcı diin içinden çıkar şekil bozukluğu oluşur. */
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box"></div>
+    </div>
+</body>
+</html>
